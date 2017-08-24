@@ -16,7 +16,7 @@
     <div>单选框</div>
     <SunRadio option="optionRadio"></SunRadio>
     <div>多选框</div>
-    <SunCheckbox></SunCheckbox>
+    <SunCheckbox option="optionRadio"></SunCheckbox>
     <div>表格</div>
     <SunThead define="" :trData="trDatas"></SunThead>
     <SunTbody @operate="operate" define="" :thData="thData"></SunTbody>

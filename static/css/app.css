@@ -82,19 +82,6 @@
   outline: none;
 }
 
-.content {
-  border: 1px solid black;
-  width: 450px;
-  height: 200px;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-
-.sex {
-  margin-left: 35%;
-  margin-top: 15%;
-}
-
 .radio_btn {
   background: #00bcff;
   display: inline-block;
@@ -135,21 +122,14 @@
   opacity: 1;
 }
 
-.check-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 300px;
-  margin: 30px auto;
-}
-
 .wrapper {
   margin-bottom: 10px;
 }
 
 .box {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
   position: relative;
   border: 2px solid #00bcff;
@@ -171,7 +151,7 @@
   position: absolute;
   top: -10px;
   right: 3px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   font-family: Arial;
   -webkit-transform: rotate(30deg);

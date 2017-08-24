@@ -2,16 +2,16 @@
 <div class="check-box">
 　　　 <div class="wrapper">
         <div class="box">
-          <input type="checkbox" checked="checked" id="milk" /><span>√</span>
+          <input type="checkbox"/><span>√</span>
         </div>
-        <lable for="milk">牛奶</lable>
+        <span>牛奶</span>
       </div>
       
       <div class="wrapper">
         <div class="box">
-          <input type="checkbox"  id="water" /><span>√</span>
+          <input type="checkbox"/><span>√</span>
         </div>
-        <label for="water">水</label>
+        <span>水</span>
       </div>
 </div>
 </template>
