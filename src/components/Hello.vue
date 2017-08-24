@@ -15,6 +15,8 @@
     <SunInput class="xs"></SunInput>
     <div>单选框</div>
     <SunRadio option="optionRadio"></SunRadio>
+    <div>多选框</div>
+    <SunCheckbox></SunCheckbox>
     <div>表格</div>
     <SunThead define="" :trData="trDatas"></SunThead>
     <SunTbody @operate="operate" define="" :thData="thData"></SunTbody>
@@ -26,6 +28,7 @@
 import SunBtn from './Btn/Sun-Btn'
 import SunInput from './Input/Sun-Input'
 import SunRadio from './Radio/Sun-Radio'
+import SunCheckbox from './Checkbox/Sun-Checkbox'
 import SunTbody from './Table/Sun-Tbody'
 import SunThead from './Table/Sun-Thead'
 import SunTable from './Table/Sun-Table'
@@ -35,6 +38,7 @@ export default {
     SunBtn,
     SunInput,
     SunRadio,
+    SunCheckbox,
     SunThead,
     SunTbody,
     SunTable

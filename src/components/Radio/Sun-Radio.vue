@@ -1,13 +1,17 @@
 <template>
-  <label :class="['sun-radio']">
-    <input type="radio" class="radio" :disabled="disabled"
-      :checked="isOption ? value == option : value"
-      :value="option"
-      @change="changeValue">
-    <span class="as-text">
-      <slot></slot>
-    </span>
-  </label>
+    <div class="sex">
+        <span class="radio_btn">
+            <input type="radio" name="sex" id="man" />
+            <span></span>
+        </span>
+        <label for="man" >男</label>
+
+        <span class="radio_btn">
+            <input type="radio" name="sex" id="male">
+            <span></span>
+        </span>
+        <label for="male">女</label>
+    </div>
 </template>
 <script>
   export default {
