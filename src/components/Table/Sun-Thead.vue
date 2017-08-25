@@ -2,7 +2,7 @@
   <table>
     <tr>
       <td v-if="checked">
-        <input type="checkbox" v-model="trData.checked">全选
+        <input type="checkbox" v-model="trData.checked" @click="checkedAll(trData)">全选
       </td>
       <td @click="sort($index, sunTr)" v-for="(sunTr, $index) in trData" :class="['sun-thead']">
         <span>{{sunTr}}</span>
@@ -15,7 +15,7 @@
     props: {
       define: false,
       trData: '',
-      checked: ''
+      checked: '' // 是否有选项
     },
     data () {
       return {
@@ -26,6 +26,9 @@
       sort ($index, sunTr) {
         this.sorts = !this.sorts
         this.$emit('sort', $index, this.sorts, sunTr)
+      },
+      checkedAll (checkData) {
+        this.$emit('checkAll', checkData)
       }
     }
   }

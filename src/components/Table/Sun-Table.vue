@@ -1,7 +1,7 @@
 <template>
   <div class="sun-table">
-    <SunThead define="" :trData="columns" @sort="sort" :checked="allCheck"></SunThead>
-    <SunTbody @operate="operate" define="" :rows="rows" :checked="allCheck" @checked="checked"></SunTbody>
+    <SunThead define="" :trData="columns" @sort="sort" :checked="checked" @checkAll="checkAll"></SunThead>
+    <SunTbody @operate="operate" define="" :rows="rows" :checked="checked" @checked="checked" @checkAll="checkAll"></SunTbody>
   </div>
 </template>
 <script>
@@ -15,8 +15,7 @@ export default {
   },
   props: {
     columns: '',
-    rows: '',
-    allCheck: false
+    rows: ''
   },
   methods: {
     operate (entrys, $index) {
@@ -38,8 +37,27 @@ export default {
         }
       })
     },
+    forEachs (data) {
+      data.forEach((element, index) => {
+        this.$set(this.rows, index, this.rows[index])
+      })
+    },
     checked (checkedData) {
+      // checkedData.forEach((item, index) => {
+      //   this.$set(this.rows, index, this.rows[index])
+      // })
+      // this.rows.forEach((element, index) => {
+      //   this.$set(this.rows, index, this.rows[index])
+      // })
+      this.forEachs(checkedData)
+      this.forEachs(this.rows)
       this.$emit('checked', checkedData)
+    },
+    checkAll (checkData) {
+      this.rows.forEach((element, index) => {
+        element.checked = checkData.checked
+        this.$set(this.rows, index, this.rows[index])
+      })
     }
   }
 }

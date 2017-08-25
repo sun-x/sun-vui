@@ -18,10 +18,10 @@
     <div>多选框</div>
     <SunCheckbox option="optionRadio"></SunCheckbox>
     <div>表格</div>
-    <SunThead define="" :trData="trDatas"></SunThead>
-    <SunTbody @operate="operate" define="" :thData="thData"></SunTbody>
-    <div>组合表格</div>
     <SunTable @operate="operate" @checked="checked" :rows="thData" :columns="trDatas" :all-check="true"></SunTable>
+    <div>下拉单选</div>
+    <SunSelect :options="option" @selected="select(selected)"></SunSelect>
+    <SunSelectM :options="option" sizes="xs"></SunSelectM>
   </div>
 </template>
 <script>
@@ -32,6 +32,8 @@ import SunCheckbox from './Checkbox/Sun-Checkbox'
 import SunTbody from './Table/Sun-Tbody'
 import SunThead from './Table/Sun-Thead'
 import SunTable from './Table/Sun-Table'
+import SunSelect from './Select/Sun-Select'
+import SunSelectM from './Select/Sun-SelectM'
 export default {
   name: 'hello',
   components: {
@@ -41,12 +43,15 @@ export default {
     SunCheckbox,
     SunThead,
     SunTbody,
-    SunTable
+    SunTable,
+    SunSelect,
+    SunSelectM
   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       optionRadio: {text: 'PHP', value: '1'},
+      selected: 3,
       option: [
         {text: 'PHP', value: '1'},
         {text: 'JS', value: '2'},
@@ -115,6 +120,9 @@ export default {
     },
     checked (checkedData) {
       console.log(checkedData)
+    },
+    select (selected) {
+      console.log(selected)
     }
   }
 }
